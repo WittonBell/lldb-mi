@@ -848,7 +848,7 @@ CMIUtilString CMIUtilString::ConvertToPrintableASCII(const char vChar,
     if (::isprint(vChar))
       return Format("%c", vChar);
     else
-      return Format("\\x%02" PRIx8, vChar);
+      return Format("\\x%02" PRIx8, (unsigned char)vChar);
   }
 }
 
